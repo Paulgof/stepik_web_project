@@ -10,10 +10,10 @@ sudo ln -sf /usr/bin/python3.6 /usr/bin/python3
 sudo rm /usr/bin/pydoc3
 sudo ln -sf /usr/bin/pydoc3.6 /usr/bin/pydoc3
 
-sudo wget https://bootstrap.pypa.io/ez_setup.py -O - | python3
+sudo wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python3
 sudo pip3 install --force-reinstall setuptools
 
-sudo pip3 install django==2.2
+sudo pip3 install django==2.1
 sudo pip3 install gunicorn==19.5
 
 gunicorn -b "0.0.0.0:8080" hello:entrance -D
